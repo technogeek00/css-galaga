@@ -1,0 +1,18 @@
+body {
+	background: black;
+	font-family: Emulogic, "Courier New";
+	margin: 0px;
+}
+#title {
+	width: 100%;
+	text-align: center;
+	color: #FFFFFF;
+	font-family: Emulogic, "Courier New";
+	font-size: 18pt;
+}
+#title span {
+	color: #FF0000;
+}
+#title > #sub, #title > #version {
+	font-size: 8pt;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+	<title>GALAGA</title>
+	<link rel="stylesheet" type="text/css" href="galaga.css" />
+	<link rel="stylesheet" type="text/css" href="galagaPage.css" />
+	<script src="jquery-1.8.2.js"></script>
+	<script src="galaga.js"></script>
+</head>
+<body>
+	<!--
+		All objects are to be constructed with 1px per px ratio
+		Then apply the following to all models:
+		transform: scale(n);
+		transform-origin: 0 0;
+		Check the CSS for the style rules, but simply apply a single style no extra divs needed
+		Galagas Actual width is 224 width by 288 height
+		Top bar and bottom bar have height of 15
+	-->
+	<div id="title">
+		<div id="head">Galaga <span>ALPHA RELEASE</span></div>
+		<div id="sub">Using only HTML, CSS, and JS. Chrome <span>required</span> at this stage</div>
+		<div id="version"><span>Version 0.2b</span> - Minor speed improvements, transition to HTML5 Custom Tags</div>
+	</div>
+	<galaga>
+		<header>
+			<div id="highscore-title" class="center">High Score</div>
+			<highscore class="center">20000</highscore>
+			<oneup>1up</oneup>
+			<playerscore class="left" data-points="0">0</playerscore>
+		</header>
+		<playarea>
+			<starfield></starfield>
+			<message>Loading Files</message>
+		</playarea>
+		<footer></footer>
+		<div class="audio">
+			<audio id="theme" preload="auto">
+				<source src="sounds/theme.mp3" type="audio/mp3">
+			</audio>
+			<audio id="start" preload="auto">
+				<source src="sounds/start.mp3" type="audio/mp3">
+			</audio>
+			<audio id="firing" preload="auto">
+				<source src="sounds/firing.mp3" type="audio/mp3">
+			</audio>
+			<audio id="coin" preload="auto">
+				<source src="sounds/coin.mp3" type="audio/mp3">
+			</audio>
+			<audio id="kill" preload="auto">
+				<source src="sounds/kill.mp3" type="audio/mp3">
+			</audio>
+		</div>
+	</galaga>
+</body>
